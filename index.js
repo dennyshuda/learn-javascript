@@ -1,9 +1,9 @@
-const insertName = prompt("Say Halo");
+const insertName = prompt("Input your name");
 
 if (insertName == "halo" || insertName == "Halo") {
   window.alert("Nice to meet you!");
 } else {
-  window.alert("something wrong");
+  window.alert(`Halo ${insertName} Lets play`);
 }
 
 const fullName = "Denny Setyawan Huda";
@@ -30,3 +30,20 @@ function sayName(firstName, lastName = "oke") {
 }
 
 sayName("akbar");
+
+console.log("Let's Play The game");
+
+let secretNumber = 28;
+
+let chance = 3;
+
+function guessTheNumber(userNumber) {
+  if (userNumber != secretNumber) {
+    chance = chance - 1;
+    console.log(`Opps... Your chance left is ${chance}`);
+  } else {
+    console.log(`Good Job.. the secret number is ${secretNumber}`);
+  }
+}
+
+guessTheNumber(78);
